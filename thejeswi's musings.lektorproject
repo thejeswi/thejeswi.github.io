@@ -1,8 +1,0 @@
-[project]
-name = thejeswi's musings
-
-[packages]
-lektor-markdown-highlighter = 0.2
-
-[servers.ghpages]
-target = ghpages+https://github.com/thejeswi/thejeswi.github.io.git
