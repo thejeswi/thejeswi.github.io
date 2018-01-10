@@ -1,0 +1,31 @@
+<!doctype html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{{ '/static/style.css'|url }}">
+<title>{% block title %}Welcome{% endblock %} — thejeswi's musings</title>
+<style>
+body {
+        background:url("{{ '/static/bg.jpg'|url }}")
+    }
+</style>
+<body>
+  <header>
+    <h1>thejeswi's musings</h1>
+    <nav>
+      <ul class="nav navbar-nav">
+          <li{% if this._path == '/' %} class="active"{% endif
+          %}><a href="{{ '/'|url }}">About</a></li>
+        {% for href, title in [
+          ['/blog', 'Blog'],
+          ['/projects', 'Projects'],
+        ] %}
+          <li{% if this.is_child_of(href) %} class="active"{% endif
+            %}><a href="{{ href|url }}">{{ title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
+  <div class="page">
+    {% block body %}{% endblock %}
+  </div>
+  </body>
+<link rel="stylesheet" href="{{ get_pygments_stylesheet()|url }}">
