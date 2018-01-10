@@ -5,4 +5,4 @@ name = thejeswi's musings
 lektor-markdown-highlighter = 0.2
 
 [servers.ghpages]
-target = ghpages://git@github.com:thejeswi/thejeswi.github.io.git
+target = ghpages+https://github.com/thejeswi/thejeswi.github.io.git
